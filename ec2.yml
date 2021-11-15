@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  WebInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      DisableApiTermination: true
+      InstanceType: t2.micro
+      ImageId: ami-0912f71e06545ad88
+      KeyName: cenfix
+      Monitoring: true
+      SecurityGroupIds:
+        - sg-0daa4571e72cb5541
+      SubnetId: subnet-c484a988
+      Tags:
+        -
+          Key: Name
+          Value: webserver
+
+
